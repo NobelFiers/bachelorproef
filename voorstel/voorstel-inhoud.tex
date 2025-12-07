@@ -15,30 +15,10 @@ uitgewerkt (met medesturent Elias Van Meerssche als mede-auteur).
 \section{Inleiding}
 \label{sec:inleiding}
 
-Binnen de HOGENT wordt er voor lessen met verplichte aanwezigheid gecontrolleerd of studenten degelijk zijn komen opdagen. De manier waarop deze aanwezigheid word bijgehouden is doormiddel van een QR-code die geprojecteerd wordt. De student scanned deze code wat leid naar het schoolplatform en bevestigd zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Het probleem bij deze methode van aanwezigheden afnemen is dat studenten de QR-code kunnen fotograferen en doorsturen naar hun medestudenten die al dan niet thuis zijn of ergens volledig anders. 
+Binnen de HOGENT wordt er voor lessen met verplichte aanwezigheid gecontroleerd of studenten degelijk zijn komen opdagen. De manier waarop deze aanwezigheid word bijgehouden is doormiddel van een QR-code die geprojecteerd wordt. De student scanned deze code wat leid naar het schoolplatform (Chamilo) en bevestigd zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Het probleem bij deze methode van aanwezigheden afnemen is dat studenten de QR-code kunnen fotograferen en doorsturen naar hun medestudenten die al dan niet thuis zijn of ergens volledig anders. 
 
-Het doel van deze bachelorproef is onderzoeken welk alternatief er kan worden uitgewerkt als verbetering op het huidig systeem tegen aanwezigheidsfraude van HOGENT en of deze methode effectief genoeg is. Doormiddel van verschillende deelvragen zullen de vereisten van het alternatief duidelijker worden gemaakt. Om de oorzaak en problemen meet te schetsen wordt er onder anderen bekeken wat de toegankelijke methodes zijn om aanwezigheidsfraude te plegen en welke factoren invloed hebben op de mogelijke oplossingen. Alhoewel er een ruim aantal opties ter beschikking staan zal deze bachelorproef zich maar beperken tot een paar om de uitwerking behaalbaar te houden en om in grote lijnen te kunnen aanduiden wat de mogelijke mankementen of voordelen zijn van zulke methodes.
+Het doel van deze bachelorproef is onderzoeken hoe geofencing kan worden toegepast om te helpen de aanwezigheids fraude tegen te gaan binnen de verplichte lessen van HOGENT. Doormiddel van een onderzoek naar de toepassingen van geofencing alsook de noden van een nieuw systeem zal dit worden uitgewerkt. Het uiteindelijke doel is een uitbreiding op het huidig systeem implementeren die het aantal vervalsingen van aanwezigheid kan verlagen. De toepassing van geofencing is niet de enigste oplossing voor dit scenario dus mogelijke alternatieven zullen besproken worden maar zijn hier niet het doel om uit te werken.
 
-Na het bespreken van de mogelijke opties zal er gekeken worden of er een methode is die ligt binnen het vakgebied om verder uit te werken. Bij het selecteren van deze methode zal gekeken worden of het voldoet aan enkele opgestelde criterea zoals de kost, efficiëntie en haalbaarheid ervan. Tot slot zal deze methode uitgewerkt worden in een proof-of-concept om de praktische implementatie te testen alsook een idee te schetsen over de functionaliteit hiervan. Het einddoel is om op basis van deze resultaten te concluderen of de voorgestelde methode(s) een haalbaar alternatief kunnen zijn voor het huidig systeem binnen HOGENT.
-
-%NOG WEGHALEN 
-
-% Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
-
-% \begin{itemize}
-%   \item kaderen thema
-%   \item de doelgroep
-%   \item de probleemstelling en (centrale) onderzoeksvraag
-%   \item de onderzoeksdoelstelling
-% \end{itemize}
-
-% Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
-
-% De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-
-% Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-
-% Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
 
 %---------- Stand van zaken ---------------------------------------------------
 
@@ -50,10 +30,31 @@ Na het bespreken van de mogelijke opties zal er gekeken worden of er een methode
 % DEELVRAGEN:
 
 % - wat is het huidig systeem en wat zijn de problemen ervan?
+Tijdens de lessen word een QR-code geprojecteerd vanvoor op het bord, studenten krijgen vervolgens de tijd om deze code te scannen en zo worden ze aangemeld. In de tijd dat deze code aan het bord staat kunnen studenten een foto trekken hiervan en doorsturen naar hun medestudenten overal. Het huidig systeem heeft een paar problemen die dit zo makelijk maken te doen. 
+- Een QR-code altijd hetzelfde van functionaliteit, ongeacht of het de echte is of een foto ervan. 
+- Er is ruime tijd om de code te scannen aangezien het relatief lang duurt om chamilo in te laden wanneer een 100 tal studenten tegelijk probeerd aan te melden.
+- Er zijn teveel studenten om te controlleren of ze fotos aan het trekken zijn of degelijk de code aan het scannen zijn.
+- De aanmelding doet niks meer dan bevestigen dat student X de QR-code heeft gescanned.
+De combinatie van deze verschillende problemen maakt het huidig zo makelijk om aan aanwezigheidsfraude te plegen. 
+
 % - wat zijn factoren dat het nieuwe systeem aan moet voldoen?
+Bij het ontwikkelen van een alternatief moet er dus gezocht worden of er een paar van deze problemen kunnen worden vermeden. Een andere belangrijke factor die moet worden bijgehouden, is hoe ze liggen binnen de grenzen van de GDPR-wetgeving. De Europese wetgeving rond data veiligheid en  https://gdpr-info.eu/
+
 % - wat zijn mogelijke alternatieven of uitbreidingen?
-% - welk alteratief is er interesanter om uit te werken en waarom (verklaar ook of het andere alternatief deftig is ja/nee)
+
+
+% - wat is geofencing en zijn er variaties van?
+
+
+% - hoe zou geofencing toepasbaar zijn op dit probleem?
+
+
+% - gdpr/privacy omtrent studenten
+
+
 % - wat is er nodig om het alternatief te implementeren?
+
+
 % - wat zal het verschil zijn tussen het hudig systeem en het voorgestelde alternatief?
 
 
