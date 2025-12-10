@@ -39,23 +39,32 @@ De combinatie van deze verschillende problemen maakt het huidig zo makelijk om a
 
 % - wat zijn factoren dat het nieuwe systeem aan moet voldoen?
 % - gdpr/privacy omtrent studenten p1
-Bij het ontwikkelen van een alternatief moet er dus gezocht worden of er een paar van deze problemen kunnen worden vermeden. Een andere belangrijke factor die moet worden bijgehouden, is hoe ze liggen binnen de grenzen van de GDPR-wetgeving. De Europese wetgeving rond data veiligheid en privacy ook wel bekend als de General Data Protection Regulation (GDPR) is een van de belangerijkste factoren om mee rekening te houden tijdens dit onderzoek. Enkele nuttige methodes die besproken zullen worden waarop dit toepasbaar is, is biometrische data, RFID en GPS/locatie-gebasseerde data.
-\subsection{biometrische data}
-Biometrische data word beschreven door \textcite{9NINEID} als "Biometrische data is gedefinieerd door de GDPR"
-Een voorbeeld van hoe dit kan worden toegepast is als er gebruikt zou gemaakt worden van gezichtsherkenning door cameras in de lokalen. Alhoewel een camera op zichzelf is toegestaan, komt de GDPR pas ten sprake eens je deze recordings zou combineren met gezichtsherkennende software. Volgens \textcite{Persoonsgegevens2025} valt software gebruiken om gezichten te analyseren en zo ze te kunnen onderschijden van elkaar met als doel iemand te identificeren onder de criteria van biometrische data. Alle data die voldoet aan deze lijst moet dus ook voldoen aan GDPR-wetgevingen, anders is dit een misbruik van informatie. 
-  https://gdpr-info.eu/
-
 % - wat zijn mogelijke alternatieven of uitbreidingen?
+Bij het uitwerken van van oplossingen voor het aanwezigheidsprobleem zal er ook gekeken worden naar de GDPR-wetgeving. De Europese wetgeving rond data veiligheid en privacy ook wel bekend als de General Data Protection Regulation (GDPR) is een van de belangerijkste factoren om mee rekening te houden tijdens dit onderzoek. Enkele nuttige methodes die besproken zullen worden waarop dit toepasbaar is, is biometrische data, RFID en GPS/locatie-gebasseerde data.
 
+\subsection{biometrische data}
+Biometrische data word beschreven door \textcite{9NINEID} als een unieke set aan informatie die vergaard wordt via technische proccessen gelinkt aan een persoon zijn fysieke, mentale of gedrags-atrbiuten. Dit kan onder anderen gebeuren via gezichtsherkenning of vingerafrukken. Een voorbeeld van hoe dit kan worden toegepast is als er gebruikt zou gemaakt worden van gezichtsherkenning door cameras in de lokalen. Alhoewel een camera op zichzelf is toegestaan, komt de GDPR pas ten sprake eens je deze recordings zou combineren met gezichtsherkennende software. Volgens \textcite{Persoonsgegevens2025} valt software gebruiken om gezichten te kunnen onderschijden van elkaar met als doel iemand te identificeren onder de criteria van biometrische data. Alle data die voldoet aan deze lijst moet dus ook voldoen aan GDPR-wetgevingen, anders is dit een misbruik van informatie. In 2019 had een Zweedse school geprobeerd te werken met aanwezigheden afnemen via gezichtsherkenning, maar er werd tijdens de proef periode vastgesteld door de Zweedse Data Protection Agreement (DPA) dat deze test moest stopgezet worden. De privacy van studenten werd niet gerespecteerd door deze constante monitoring en schende daarbij ook enkele regels van de GDPR. De verantwoordelijke school moest hiervoor 200.000 SEK betalen in schadevergoeding wat gelijkaardig staat aan 20.000 euro \autocite{Sanktionsavgift för ansiktsigenkänning i skola
+}.
 
+\subsection{Radio-Frequency IDentification (RFID)}
+RFID is een technologie waarbij er via radio signalen kan data overgeplaatst worden zonder direct contact \autocite{https://www.rfidlabel.com/rfid-in-education/}. Deze technology word onder anderen toegepast bij de studentenkaarten van HOGENT. Elke student bezit een kaart met zijn studenten foto, een barcode als identificatie voor de kaart maar ook een inwendige chip. Deze chip kan gebruikt worden om via de studentenkaart te betalen alsook om te bevestigen dat je een geldige student bent. Deze technology is heel flexibel en kan dus ook toegepast worden om aanwezigheden af te nemen. Bedrijven zoals Cykeo en Viaonda hebben zich gericht naar het ontwikkelen van een systeem dat toelaat aanwezigheden af te nemen via verschillende RFID-scanners buiten lokalen, aan de school ingang of in de hallen \autocites{https://www.viaondarfid.com.br/en/rfid-in-schools-and-universities/}{https://www.cykeorfid.com/rfid-school-attendance-system-game-changer-in-educational-management/}. Deze methode van aanmelden is efficïent en al deels geïmplementeerd dankzij de studentenkaarten, maar om het volledig te kunnen benutten zou nog de installatie nodig zijn van de scanners doorheen de campus. Een van de voornaamste nadelen wel van deze methode voor aanwezigheden af te nemen is dat een student meerdere kaarten kan meenemen en scannen wat zorgt dat fraude mogelijk blijft.
 % - wat is geofencing en zijn er variaties van?
+\subsection{geofencing}
+Geofencing is een locatie-gebasseerde technologie die virtuele grenzen trekt rond een omgeving. Deze grenzen kunnen op verschillende manieren gebruikt worden, gaande van gewoon informatie verzamelen hoe vaak mensen een plek passeren tot actief iemand zijn toegang tot applicaties of andere software beperken bij het verlaten van deze grens. Binnen deze methode kan een onderschijd gemaakt woden tussen twee types van geofencing, actieve en passieve:
 
+\subsubsection{actieve}
+Actieve geofencing gebeurt doormiddel van de gebruiker zijn GPS (Global Positioning System) om zo nauwkeurig de locatie te kunnen volgen en data op te halen. Deze methode is intensiever voor batterijgebruik door de constante data die doorgegeven wordt en de applicatie die blijft draaien. Enkele voordelen van deze methode is onder anderen dat er een melding of andere reactie kan geactiveerd worden indien de gebruiker een virtuele grens oversteekt of zich op een bepaalde locatie bevind. Het ander voordeel is dat actieve geofencing accurater is in het bepalen van de gebruiker zijn locatie. Een voorbeeld hiervan is het spel "pokemon-go" waar de speler zijn locatie in het spel meebeweegd met zijn locatie in het echt.
+\autocite{https://www.geofli.com/blog/types-of-geofencing}
+https://www.applause.com/blog/geofencing-definitions/
+
+\subsubsection{passieve}
+Passieve geofencing is heel vaak actief zonder dat men het doorheeft. In tegenstelling tot actieve geofencing wordt er hier geen actief progamma gedraaid om de locatie bij te houden. Deze methode is minder intensief op de baterij aangezien er niet naar de exacte locatie van een toestel word gekeken, maar eerder naar netwerken of telefoonmasten in de buurt waarmee er verbonden wordt. Door hoe deze methode werkt zal het minder accuraat de locatie van de gebruiker kunnen weergeven maar is daarintegen wel altijd beschikbaar wat handig is voor bedrijven die meer willen weten over het algemene gedrag van hun klanten. Een voorbeeld van deze methode is proximus of telenet die een bericht sturen als je naar het buitenland gaat.
+\autocite{https://www.geofli.com/blog/types-of-geofencing}
+https://www.applause.com/blog/geofencing-definitions/
 
 % - hoe zou geofencing toepasbaar zijn op dit probleem?
-
-
 % - gdpr/privacy omtrent studenten p2
-
+De toepassing dat in deze paper onderzocht wordt is hoe deze onzichtbare grenzen kunnen worden gebruikt bij het registreren van studenten hun aanwezigheid. Om te kunnen zien of een student zich in de geofence bevind kan gebruik gemaakt worden van hun IP dat ze van het netwerk hebben gekregen of via hun locatie. Het gebruik van studenten hun locatie zal indien mogelijk vermeden worden aangezien dit dichter ligt bij de privacy van studenten en omdat dit ook vereist dat elke student hun locatie aanstaat tijdens het scannen van de QR-code. Naast de privacy van de student zal er ook grondig moeten gecontrolleerd worden dat de uitwerking niet in tegenstrijd is met de GDPR-wetgeving. De uiteindelijke uitwerking van dit systeem zou idealiter langs de kant van de student weinig verschil maken ten opzichte van het huidig systeem. Het meeste dat veranderd zal worden gebeurt achter de schermen.
 
 % - wat is er nodig om het alternatief te implementeren?
 
@@ -105,9 +114,4 @@ Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je ond
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
-
+Het resultaat van de proof-of-concept zal behaald worden via een opstelling die de ip-adressen van de studenten ophaalt. Wanneer ze de QR-code scannen wordt gekeken of ze liggen binnen een zone rond de campus die opgesteld is doormiddel van geofencing. Indien het lukt om met deze opstelling de locatie van studenten te bepalen tijdens het scannen van de QR-code, is het eerste deel hiervan gelukt. Het verwacht resutaat is dat op basis van deze locatie er geconcludeerd kan worden of de student aanwezig was op de campus tijdens het moment dat de QR-code verscheen. Als dit resultaat is behaald zal HOGENT dit kunenn implementeren als vervanging van het huidig systeem. Indien de accuraatheid van de positie te ruim is zal dit niet betrouwbaar genoeg zijn voor aanwezigheden af te nemen en zal HOGENT dit niet implementeren. De proof-of-concept kan op verschillende tussenstappen ook vastlopen maar dit concludeerd niet meteen of het onderzoek faalt. Indien bepaalde services niet betaalbaar zijn op dit moment of kennis verijzen die niet aanwezig was tijdens dit onderzoek, dan kan het onderzoek niet verder worden uitgevoerd. In het geval dat dit zich voordoet kan de vergaarde kennis dienen als basis voor verdere uitwerking of een gelijkaardige onderzoek.
