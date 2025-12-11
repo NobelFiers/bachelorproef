@@ -43,24 +43,21 @@ De combinatie van deze verschillende problemen maakt het huidig zo makelijk om a
 Bij het uitwerken van van oplossingen voor het aanwezigheidsprobleem zal er ook gekeken worden naar de GDPR-wetgeving. De Europese wetgeving rond data veiligheid en privacy ook wel bekend als de General Data Protection Regulation (GDPR) is een van de belangerijkste factoren om mee rekening te houden tijdens dit onderzoek. Enkele nuttige methodes die besproken zullen worden waarop dit toepasbaar is, is biometrische data, RFID en GPS/locatie-gebasseerde data.
 
 \subsection{biometrische data}
-Biometrische data word beschreven door \textcite{9NINEID} als een unieke set aan informatie die vergaard wordt via technische proccessen gelinkt aan een persoon zijn fysieke, mentale of gedrags-atrbiuten. Dit kan onder anderen gebeuren via gezichtsherkenning of vingerafrukken. Een voorbeeld van hoe dit kan worden toegepast is als er gebruikt zou gemaakt worden van gezichtsherkenning door cameras in de lokalen. Alhoewel een camera op zichzelf is toegestaan, komt de GDPR pas ten sprake eens je deze recordings zou combineren met gezichtsherkennende software. Volgens \textcite{Persoonsgegevens2025} valt software gebruiken om gezichten te kunnen onderschijden van elkaar met als doel iemand te identificeren onder de criteria van biometrische data. Alle data die voldoet aan deze lijst moet dus ook voldoen aan GDPR-wetgevingen, anders is dit een misbruik van informatie. In 2019 had een Zweedse school geprobeerd te werken met aanwezigheden afnemen via gezichtsherkenning, maar er werd tijdens de proef periode vastgesteld door de Zweedse Data Protection Agreement (DPA) dat deze test moest stopgezet worden. De privacy van studenten werd niet gerespecteerd door deze constante monitoring en schende daarbij ook enkele regels van de GDPR. De verantwoordelijke school moest hiervoor 200.000 SEK betalen in schadevergoeding wat gelijkaardig staat aan 20.000 euro \autocite{Sanktionsavgift för ansiktsigenkänning i skola
-}.
+Biometrische data word beschreven door \textcite{Jeunen2025} als een unieke set aan informatie die vergaard wordt via technische proccessen gelinkt aan een persoon zijn fysieke, mentale of gedrags-atrbiuten. Dit kan onder anderen gebeuren via gezichtsherkenning of vingerafrukken. Een voorbeeld van hoe dit kan worden toegepast is als er gebruikt zou gemaakt worden van gezichtsherkenning door cameras in de lokalen. Alhoewel een camera op zichzelf is toegestaan, komt de GDPR pas ten sprake eens je deze recordings zou combineren met gezichtsherkennende software. Volgens \textcite{Persoonsgegevens2025} valt software gebruiken om gezichten te kunnen onderschijden van elkaar met als doel iemand te identificeren onder de criteria van biometrische data. Alle data die voldoet aan deze lijst moet dus ook voldoen aan GDPR-wetgevingen, anders is dit een misbruik van informatie. In 2019 had een Zweedse school geprobeerd te werken met aanwezigheden afnemen via gezichtsherkenning, maar er werd tijdens de proef periode vastgesteld door de Zweedse Data Protection Agreement (DPA) dat deze test moest stopgezet worden. De privacy van studenten werd niet gerespecteerd door deze constante monitoring en schende daarbij ook enkele regels van de GDPR. De verantwoordelijke school moest hiervoor 200.000 SEK betalen in schadevergoeding wat gelijkaardig staat aan 20.000 euro \autocite{Board2025}.
 
 \subsection{Radio-Frequency IDentification (RFID)}
-RFID is een technologie waarbij er via radio signalen kan data overgeplaatst worden zonder direct contact \autocite{https://www.rfidlabel.com/rfid-in-education/}. Deze technology word onder anderen toegepast bij de studentenkaarten van HOGENT. Elke student bezit een kaart met zijn studenten foto, een barcode als identificatie voor de kaart maar ook een inwendige chip. Deze chip kan gebruikt worden om via de studentenkaart te betalen alsook om te bevestigen dat je een geldige student bent. Deze technology is heel flexibel en kan dus ook toegepast worden om aanwezigheden af te nemen. Bedrijven zoals Cykeo en Viaonda hebben zich gericht naar het ontwikkelen van een systeem dat toelaat aanwezigheden af te nemen via verschillende RFID-scanners buiten lokalen, aan de school ingang of in de hallen \autocites{https://www.viaondarfid.com.br/en/rfid-in-schools-and-universities/}{https://www.cykeorfid.com/rfid-school-attendance-system-game-changer-in-educational-management/}. Deze methode van aanmelden is efficïent en al deels geïmplementeerd dankzij de studentenkaarten, maar om het volledig te kunnen benutten zou nog de installatie nodig zijn van de scanners doorheen de campus. Een van de voornaamste nadelen wel van deze methode voor aanwezigheden af te nemen is dat een student meerdere kaarten kan meenemen en scannen wat zorgt dat fraude mogelijk blijft.
+RFID is een technologie waarbij er via radio signalen kan data overgeplaatst worden zonder direct contact \autocite{Andrew}. Deze technology word onder anderen toegepast bij de studentenkaarten van HOGENT. Elke student bezit een kaart met zijn studenten foto, een barcode als identificatie voor de kaart maar ook een inwendige chip. Deze chip kan gebruikt worden om via de studentenkaart te betalen alsook om te bevestigen dat je een geldige student bent. Deze technology is heel flexibel en kan dus ook toegepast worden om aanwezigheden af te nemen. Bedrijven zoals Cykeo en Viaonda hebben zich gericht naar het ontwikkelen van een systeem dat toelaat aanwezigheden af te nemen via verschillende RFID-scanners buiten lokalen, aan de school ingang of in de hallen \autocites{ViaOnda2025}{Cykeo2025}. Deze methode van aanmelden is efficïent en al deels geïmplementeerd dankzij de studentenkaarten, maar om het volledig te kunnen benutten zou nog de installatie nodig zijn van de scanners doorheen de campus. Een van de voornaamste nadelen wel van deze methode voor aanwezigheden af te nemen is dat een student meerdere kaarten kan meenemen en scannen wat zorgt dat fraude mogelijk blijft.
 % - wat is geofencing en zijn er variaties van?
 \subsection{geofencing}
 Geofencing is een locatie-gebasseerde technologie die virtuele grenzen trekt rond een omgeving. Deze grenzen kunnen op verschillende manieren gebruikt worden, gaande van gewoon informatie verzamelen hoe vaak mensen een plek passeren tot actief iemand zijn toegang tot applicaties of andere software beperken bij het verlaten van deze grens. Binnen deze methode kan een onderschijd gemaakt woden tussen twee types van geofencing, actieve en passieve:
 
 \subsubsection{actieve}
 Actieve geofencing gebeurt doormiddel van de gebruiker zijn GPS (Global Positioning System) om zo nauwkeurig de locatie te kunnen volgen en data op te halen. Deze methode is intensiever voor batterijgebruik door de constante data die doorgegeven wordt en de applicatie die blijft draaien. Enkele voordelen van deze methode is onder anderen dat er een melding of andere reactie kan geactiveerd worden indien de gebruiker een virtuele grens oversteekt of zich op een bepaalde locatie bevind. Het ander voordeel is dat actieve geofencing accurater is in het bepalen van de gebruiker zijn locatie. Een voorbeeld hiervan is het spel "pokemon-go" waar de speler zijn locatie in het spel meebeweegd met zijn locatie in het echt.
-\autocite{https://www.geofli.com/blog/types-of-geofencing}
-https://www.applause.com/blog/geofencing-definitions/
+\autocite{Hoffman2022}
 
 \subsubsection{passieve}
 Passieve geofencing is heel vaak actief zonder dat men het doorheeft. In tegenstelling tot actieve geofencing wordt er hier geen actief progamma gedraaid om de locatie bij te houden. Deze methode is minder intensief op de baterij aangezien er niet naar de exacte locatie van een toestel word gekeken, maar eerder naar netwerken of telefoonmasten in de buurt waarmee er verbonden wordt. Door hoe deze methode werkt zal het minder accuraat de locatie van de gebruiker kunnen weergeven maar is daarintegen wel altijd beschikbaar wat handig is voor bedrijven die meer willen weten over het algemene gedrag van hun klanten. Een voorbeeld van deze methode is proximus of telenet die een bericht sturen als je naar het buitenland gaat.
-\autocite{https://www.geofli.com/blog/types-of-geofencing}
-https://www.applause.com/blog/geofencing-definitions/
+\autocite{Hoffman2022}
 
 % - hoe zou geofencing toepasbaar zijn op dit probleem?
 % - gdpr/privacy omtrent studenten p2
@@ -75,15 +72,15 @@ De toepassing dat in deze paper onderzocht wordt is hoe deze onzichtbare grenzen
 
 
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
+% Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
 
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
+% Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
+% Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
 
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
+% Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
 
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+% Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -92,23 +89,36 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
+% Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+\subsection{probleemanalyse}
+De eerste fase van deze bachelorproef draait rond meer informatie verzamelen omtrent het probleem van aanwezigheidsfraude. Op basis van de literatuurstudie en een ondervraging van enkele studenten en leerkrachten zal worden onderzocht wat het huidig probleem is en hoe dit zich voordoet. Naast het onderzoeken van het probleem zal er ook gekeken worden welke andere factoren invloed hebben op het onderzoek. Deze factoren zullen dienen voor een analyse van de grootste struikelblokken en risico's die kunnen optreden. Voor het uitwerken van deze analyse word een periode van twee weken gerekend. De risico-analyse als resultaat van deze stap zal worden gebruikt in de tweede stap van de methodologie om te helpen bij het onderzoeken van de nodige technologie voor de uitwerking. 
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+\subsection{requirementsanalyse}
+In het tweede deel van het onderzoek zal over een periode van drie weken worden uitgezocht wat er nodig zal zijn van technologie en applicaties. Het uitwerken van hoe er verwacht wordt de aanwezigheidsfraude tegen te gaan moet eerst uitgewerkt worden zodat het duidelijk is wat voor software hier nodig is, welke infrastructuur dit op moet draaien en eventueel welke technische kennis er ontbreekt. Eens deze informatie is verzameld in een stappenplan van uitvoer en duid op een haalbaar onderzoek, kan dit verder verwerkt worden in de proof-of-concept.
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+\subsection{proof-of-concept}
+Het derde deel van de bachelorproef zal het uitwerken van de proof-of-concept zijn. Hier wordt doorheen drie weken de kennis en informatie van de vorige stappen samengebracht in een geheel. Als eerste stap van deze uitvoering, zal de test omgeving worden opgesteld. Deze opstelling zal gebruikt worden om te kunnen testen dat de uitgewerkte oplossing degelijk functioneel is. Vervolgens zal op deze opstelling de nodige handelingen worden uitgevoerd om de uitgewerkte aanmeldingsmethode te kunnen testen. Deze testen zullen verschillende factoren van het onderzoek staven zoals hoe ver de gemeten afstand is vergeleken de werkelijke locatie of tot in hoever een student zijn locatie niet ophaalbaar is.
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+\subsection{evaluatie}
+Het laatste deel van het onderzoek is het noteren en uitwerken van de behaalde resultaten. De resultaten van de proof-of-concept zullen worden genoteerd zodat achteraf kan gekeken worden hoe het onderzoek verliep. Er zal bij deze evaluatie genoteerd worden of er nog onverwachte problemen opdoken, of de nauwkeurigheid van de geofencing afweek van wat er verwacht werd en hoe het testen verliep. Het samenstellen en evalueren van deze resultaten zal ongeveer een week duren, en basis van deze resultaten kan HOGENT concluderen of de huidige toepassing van geofencing accuraat genoeg is voor de gewenste toepassing in de lessen.
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
 
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+% Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+
+% Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+
+% Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+
+% Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+
+% Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
+
+% Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
