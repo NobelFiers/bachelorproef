@@ -15,9 +15,20 @@ uitgewerkt (met medesturent Elias Van Meerssche als mede-auteur).
 \section{Inleiding}
 \label{sec:inleiding}
 
+%TESTLIJN
+
 Binnen de HOGENT wordt er voor lessen met verplichte aanwezigheid gecontroleerd of studenten degelijk zijn komen opdagen. De manier waarop deze aanwezigheid word bijgehouden is doormiddel van een QR-code die geprojecteerd wordt. De student scanned deze code wat leid naar het schoolplatform (Chamilo) en bevestigd zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Het probleem bij deze methode van aanwezigheden afnemen is dat studenten de QR-code kunnen fotograferen en doorsturen naar hun medestudenten die al dan niet thuis zijn of ergens volledig anders. 
 
-Het doel van deze bachelorproef is onderzoeken hoe geofencing kan worden toegepast om te helpen de aanwezigheids fraude tegen te gaan binnen de verplichte lessen van HOGENT. Doormiddel van een onderzoek naar de toepassingen van geofencing alsook de noden van een nieuw systeem zal dit worden uitgewerkt. Het uiteindelijke doel is een uitbreiding op het huidig systeem implementeren die het aantal vervalsingen van aanwezigheid kan verlagen. De toepassing van geofencing is niet de enigste oplossing voor dit scenario dus mogelijke alternatieven zullen besproken worden maar zijn hier niet het doel om uit te werken.
+Het doel van deze bachelorproef is onderzoeken hoe geofencing kan worden toegepast om te helpen de aanwezigheids fraude tegen te gaan binnen de verplichte lessen van HOGENT. Doormiddel van een onderzoek naar de toepassingen van geofencing alsook de noden van een nieuw systeem zal dit worden uitgewerkt. Het uiteindelijke doel is een uitbreiding op het huidig systeem te implementeren die het aantal vervalsingen van aanwezigheid kan verlagen. De nauwkeurigheid van deze uitbreiding zal ook deels bepalen hoe nuttig dit is. De toepassing van geofencing is niet de enige oplossing voor dit scenario dus mogelijke alternatieven zullen besproken worden maar zijn hier niet het doel om uit te werken. Indien mogelijk wordt er gezocht naar een oplossing die zo min mogelijk verandering langs de student hun kant vereist voor gemak alsook privacy.
+% probleemdomein: "Het uiteindelijke doel is een uitbreiding op het huidig systeem te implementeren die het aantal vervalsingen van aanwezigheid kan verlagen" -> wat is het probleem dat je probeerd op te lossen?
+
+% probleemdomein: "De toepassing van geofencing is niet de enige oplossing voor dit scenario dus mogelijke alternatieven zullen besproken worden maar zijn hier niet het doel om uit te werken" -> zijn er alternatieven en waarom zou je deze wel/niet uitwerken?
+
+
+
+% oplossingsdomein: "De nauwkeurigheid van deze uitbreiding zal ook deels bepalen hoe nuttig dit is" -> tot in hoever zal de accuraatheid uitmaken voor de nutigheid van de gekozen oplossing?
+
+% oplossingsdomein: "Indien mogelijk wordt er gezocht naar een oplossing die zo min mogelijk verandering langs de student hun kant vereist voor gemak alsook privacy." -> tot in hoever kan de oplossing worden geimplementeerd zonder dat dit teveel stoort met de studenten/extra werk vereist van hun?
 
 
 %---------- Stand van zaken ---------------------------------------------------
@@ -30,98 +41,66 @@ Het doel van deze bachelorproef is onderzoeken hoe geofencing kan worden toegepa
 % DEELVRAGEN:
 
 % - wat is het huidig systeem en wat zijn de problemen ervan?
-Tijdens de lessen word een QR-code geprojecteerd vanvoor op het bord, studenten krijgen vervolgens de tijd om deze code te scannen en zo worden ze aangemeld. In de tijd dat deze code aan het bord staat kunnen studenten een foto trekken hiervan en doorsturen naar hun medestudenten overal. Het huidig systeem heeft een paar problemen die dit zo makelijk maken te doen. 
-- Een QR-code altijd hetzelfde van functionaliteit, ongeacht of het de echte is of een foto ervan. 
-- Er is ruime tijd om de code te scannen aangezien het relatief lang duurt om chamilo in te laden wanneer een 100 tal studenten tegelijk probeerd aan te melden.
-- Er zijn teveel studenten om te controlleren of ze fotos aan het trekken zijn of degelijk de code aan het scannen zijn.
-- De aanmelding doet niks meer dan bevestigen dat student X de QR-code heeft gescanned.
-De combinatie van deze verschillende problemen maakt het huidig zo makelijk om aan aanwezigheidsfraude te plegen. 
+
+Tijdens de lessen word een QR-code geprojecteerd vooraan op het bord, studenten krijgen vervolgens de tijd om deze code te scannen en zo worden ze aangemeld. Het huidig systeem heeft een paar problemen die het frauderen makelijk maken.  De QR-code blijft lang zichtbaar staan omdat er een 100 tal studenten deze moeten scannen. Naast een tijdelijke vertraging op Chamilo door alle studenten die zich tegelijk aanmelden, zorgt dit ook dat de code lang genoeg geprojecteerd moet blijven. In de tijd dat deze code zichtbaar staat nemen de studenten een foto om door te sturen naar hun medestudenten. Het is niet mogelijk hier te controlleren welke student dit doet en welke niet, aangezien het aantal studenten te hoog is om snel te controlleren. Eens aangemeld is het ook niet mogelijk om te weten of deze student degelijk aanwezig was op het moment van de les of niet.
+
+
+
 
 % - wat zijn factoren dat het nieuwe systeem aan moet voldoen?
 % - gdpr/privacy omtrent studenten p1
 % - wat zijn mogelijke alternatieven of uitbreidingen?
-Bij het uitwerken van van oplossingen voor het aanwezigheidsprobleem zal er ook gekeken worden naar de GDPR-wetgeving. De Europese wetgeving rond data veiligheid en privacy ook wel bekend als de General Data Protection Regulation (GDPR) is een van de belangerijkste factoren om mee rekening te houden tijdens dit onderzoek. Enkele nuttige methodes die besproken zullen worden waarop dit toepasbaar is, is biometrische data, RFID en GPS/locatie-gebasseerde data.
+% - hoe zou geofencing toepasbaar zijn op dit probleem?
+Geofencing is niet de enigste optie voor het aanwezigheidsprobleem op te lossen. Er bestaan vele methodes die mogelijkheden bieden om te helpen bij dit probleem zoals biometrische authenticatie en RFID. Beiden hebben hun voordelen wat ze een mogelijk alternatief maakt voor geofencing maar niet zonder nadelen. Een belangrijke factor om mee rekening te houden is de GDPR (General Data Protection Regulation). De GDPR-wetgeving houd onder anderen in of de privacy van studenten gerespecteerd wordt bij het verzamelen van data. De twee vermelde voorbeelden worden hieronder kort besproken om te schetsen waarom ze zouden kunnen werken in dit onderzoek alsook waarom er beslist wordt op dit moment om hier niet mee verder te werken.
 
 \subsection{biometrische data}
-Biometrische data word beschreven door \textcite{Jeunen2025} als een unieke set aan informatie die vergaard wordt via technische proccessen gelinkt aan een persoon zijn fysieke, mentale of gedrags-atrbiuten. Dit kan onder anderen gebeuren via gezichtsherkenning of vingerafrukken. Een voorbeeld van hoe dit kan worden toegepast is als er gebruikt zou gemaakt worden van gezichtsherkenning door cameras in de lokalen. Alhoewel een camera op zichzelf is toegestaan, komt de GDPR pas ten sprake eens je deze recordings zou combineren met gezichtsherkennende software. Volgens \textcite{Persoonsgegevens2025} valt software gebruiken om gezichten te kunnen onderschijden van elkaar met als doel iemand te identificeren onder de criteria van biometrische data. Alle data die voldoet aan deze lijst moet dus ook voldoen aan GDPR-wetgevingen, anders is dit een misbruik van informatie. In 2019 had een Zweedse school geprobeerd te werken met aanwezigheden afnemen via gezichtsherkenning, maar er werd tijdens de proef periode vastgesteld door de Zweedse Data Protection Agreement (DPA) dat deze test moest stopgezet worden. De privacy van studenten werd niet gerespecteerd door deze constante monitoring en schende daarbij ook enkele regels van de GDPR. De verantwoordelijke school moest hiervoor 200.000 SEK betalen in schadevergoeding wat gelijkaardig staat aan 20.000 euro \autocite{Board2025}.
+Biometrische data word beschreven door \textcite{Jeunen2025} als een unieke set aan informatie die vergaard wordt via technische proccessen gelinkt aan een persoon zijn fysieke, mentale of 
+gedrags-atrbiuten. Dit kan onder anderen gebeuren via gezichtsherkenning of vingerafrukken. Een voorbeeld van hoe dit kan worden toegepast is als er gebruikt zou gemaakt worden van gezichtsherkenning door cameras in de lokalen. Alhoewel een camera op zichzelf is toegestaan, komt de GDPR pas ten sprake eens je deze recordings zou combineren met gezichtsherkennende software. Volgens \textcite{Persoonsgegevens2025} valt software gebruiken om gezichten te kunnen onderschijden van elkaar met als doel iemand te identificeren onder de criteria van biometrische data. Alle data die voldoet aan deze lijst moet dus ook voldoen aan GDPR-wetgevingen, anders is dit een misbruik van informatie. In 2019 had een Zweedse school geprobeerd te werken met aanwezigheden afnemen via gezichtsherkenning, maar er werd tijdens de proef periode vastgesteld door de Zweedse Data Protection Agreement (DPA) dat deze test moest stopgezet worden. De privacy van studenten werd niet gerespecteerd door deze constante monitoring en schende daarbij enkele regels van de GDPR. De verantwoordelijke school moest hiervoor 200.000 SEK betalen in schadevergoeding wat gelijkaardig staat aan 20.000 euro \autocite{Board2025}.
 
 \subsection{Radio-Frequency IDentification (RFID)}
-RFID is een technologie waarbij er via radio signalen kan data overgeplaatst worden zonder direct contact \autocite{Andrew}. Deze technology word onder anderen toegepast bij de studentenkaarten van HOGENT. Elke student bezit een kaart met zijn studenten foto, een barcode als identificatie voor de kaart maar ook een inwendige chip. Deze chip kan gebruikt worden om via de studentenkaart te betalen alsook om te bevestigen dat je een geldige student bent. Deze technology is heel flexibel en kan dus ook toegepast worden om aanwezigheden af te nemen. Bedrijven zoals Cykeo en Viaonda hebben zich gericht naar het ontwikkelen van een systeem dat toelaat aanwezigheden af te nemen via verschillende RFID-scanners buiten lokalen, aan de school ingang of in de hallen \autocites{ViaOnda2025}{Cykeo2025}. Deze methode van aanmelden is efficïent en al deels geïmplementeerd dankzij de studentenkaarten, maar om het volledig te kunnen benutten zou nog de installatie nodig zijn van de scanners doorheen de campus. Een van de voornaamste nadelen wel van deze methode voor aanwezigheden af te nemen is dat een student meerdere kaarten kan meenemen en scannen wat zorgt dat fraude mogelijk blijft.
+RFID is een technologie waarbij er via radio signalen kan data overgeplaatst worden zonder direct contact \autocite{Andrew}. Deze technologie word onder anderen toegepast bij de studentenkaarten van HOGENT. Elke student bezit een kaart met zijn studenten foto, een barcode als identificatie voor de kaart maar ook een inwendige chip. Deze chip toont aan dat dit een geldige studentenkaart is want hij kan onder anderen gebruikt worden om mee te betalen op campus. Deze technologie is heel flexibel en kan dus ook toegepast worden om aanwezigheden af te nemen. Bedrijven zoals Cykeo en Viaonda hebben zich gericht naar het ontwikkelen van een systeem dat toelaat aanwezigheden af te nemen via verschillende RFID-scanners buiten lokalen, aan de school ingang of in de hallen \autocites{ViaOnda2025}{Cykeo2025}. Deze methode van aanmelden is efficïent en al deels geïmplementeerd dankzij de studentenkaarten, maar om het volledig te kunnen benutten zou nog de installatie nodig zijn van de scanners doorheen de campus. Een van de voornaamste nadelen wel van deze methode voor aanwezigheden af te nemen is dat een student meerdere kaarten kan meenemen en scannen wat zorgt dat fraude mogelijk blijft.
 % - wat is geofencing en zijn er variaties van?
 \subsection{geofencing}
-Geofencing is een locatie-gebasseerde technologie die virtuele grenzen trekt rond een omgeving. Deze grenzen kunnen op verschillende manieren gebruikt worden, gaande van gewoon informatie verzamelen hoe vaak mensen een plek passeren tot actief iemand zijn toegang tot applicaties of andere software beperken bij het verlaten van deze grens. Binnen deze methode kan een onderschijd gemaakt woden tussen twee types van geofencing, actieve en passieve:
+Geofencing is een locatie-gebasseerde technologie die virtuele grenzen trekt rond een omgeving \autocite{Hoffman2022}. Deze toepassing kunnen op verschillende manieren gebruikt worden, gaande van gewoon informatie verzamelen hoe vaak mensen een plek passeren tot actief iemand zijn toegang tot applicaties of andere software beperken bij het verlaten van deze grens. Binnen deze methode kan een onderschijd gemaakt woden tussen twee types van geofencing, actieve en passieve:
 
 \subsubsection{actieve}
-Actieve geofencing gebeurt doormiddel van de gebruiker zijn GPS (Global Positioning System) om zo nauwkeurig de locatie te kunnen volgen en data op te halen. Deze methode is intensiever voor batterijgebruik door de constante data die doorgegeven wordt en de applicatie die blijft draaien. Enkele voordelen van deze methode is onder anderen dat er een melding of andere reactie kan geactiveerd worden indien de gebruiker een virtuele grens oversteekt of zich op een bepaalde locatie bevind. Het ander voordeel is dat actieve geofencing accurater is in het bepalen van de gebruiker zijn locatie. Een voorbeeld hiervan is het spel "pokemon-go" waar de speler zijn locatie in het spel meebeweegd met zijn locatie in het echt.
-\autocite{Hoffman2022}
+Actieve geofencing gebeurt doormiddel van de gebruiker zijn GPS-signaal om zo nauwkeurig de locatie te kunnen volgen en data op te halen. Deze methode is intensiever voor batterijgebruik door de constante data die doorgegeven wordt en de applicatie die blijft draaien. Een voordeel van deze methode is onder anderen dat er een melding of andere reactie kan geactiveerd worden indien de gebruiker een virtuele grens oversteekt of zich op een bepaalde locatie bevindt. Een voorbeeld hiervan is het spel "pokemon-go" waar de speler zijn locatie in het spel meebeweegd met zijn locatie in het echt \autocite{Hoffman2022}.
 
 \subsubsection{passieve}
-Passieve geofencing is heel vaak actief zonder dat men het doorheeft. In tegenstelling tot actieve geofencing wordt er hier geen actief progamma gedraaid om de locatie bij te houden. Deze methode is minder intensief op de baterij aangezien er niet naar de exacte locatie van een toestel word gekeken, maar eerder naar netwerken of telefoonmasten in de buurt waarmee er verbonden wordt. Door hoe deze methode werkt zal het minder accuraat de locatie van de gebruiker kunnen weergeven maar is daarintegen wel altijd beschikbaar wat handig is voor bedrijven die meer willen weten over het algemene gedrag van hun klanten. Een voorbeeld van deze methode is proximus of telenet die een bericht sturen als je naar het buitenland gaat.
-\autocite{Hoffman2022}
+Passieve geofencing is in tegenstelling tot actieve geofencing niet intensief op de baterij, noch heeft het GPS verbinding nodig. Deze variant werkt doormiddel van wifi, zendmasten of gelijkaardige methodes. Indien een gsm verbind met een van deze opties, kan zijn positie grofweg worden vastgesteld omdat de gebruiker zich in de buurt van het signaal moet bevinden. Op basis hiervan kunnen bedrijven signalen geven naar consumenten zoals reclame of korting \autocite{Hoffman2022}. Een voorbeeld van deze methode is Proximus of Telenet die een bericht sturen als je naar het buitenland gaat omdat je verbind met een zendmast voorbij de grens.
 
-% - hoe zou geofencing toepasbaar zijn op dit probleem?
 % - gdpr/privacy omtrent studenten p2
-De toepassing dat in deze paper onderzocht wordt is hoe deze onzichtbare grenzen kunnen worden gebruikt bij het registreren van studenten hun aanwezigheid. Om te kunnen zien of een student zich in de geofence bevind kan gebruik gemaakt worden van hun IP dat ze van het netwerk hebben gekregen of via hun locatie. Het gebruik van studenten hun locatie zal indien mogelijk vermeden worden aangezien dit dichter ligt bij de privacy van studenten en omdat dit ook vereist dat elke student hun locatie aanstaat tijdens het scannen van de QR-code. Naast de privacy van de student zal er ook grondig moeten gecontrolleerd worden dat de uitwerking niet in tegenstrijd is met de GDPR-wetgeving. De uiteindelijke uitwerking van dit systeem zou idealiter langs de kant van de student weinig verschil maken ten opzichte van het huidig systeem. Het meeste dat veranderd zal worden gebeurt achter de schermen.
+Voor de uitwerking van deze bachelorproef zal er eerder gekozen worden voor passieve geofencing. Deze methode vereist minder input van de studenten zoals hun locatie zichtbaar zetten en is minder intensief voor hun gsm-baterij. Bij het uitwerken van hoe deze passieve geofencing kan geïmplementeerd worden zal moeten opgepast worden dat hier geen schending gebeurt van de GDPR-wetgeving aangezien dit, zoals eerder vermeld kan leiden tot sancties gaande van het stopzetten van het project tot financiële vergoedingen.
 
 % - wat is er nodig om het alternatief te implementeren?
 
 
 % - wat zal het verschil zijn tussen het hudig systeem en het voorgestelde alternatief?
 
-
-
-
-
-% Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
-
-% Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
-
-% Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-% Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-% Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
-
-% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
-% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
-%   geen onderdeel is van de zin.
-% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
-%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
-%   ...'')
-
 % Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
 
 %---------- Methodologie ------------------------------------------------------
-\section{Methodologie}%
-\label{sec:methodologie}
+\section{Methodologie}
+\label{sec:methodologie} 
 
-\subsection{probleemanalyse}
-De eerste fase van deze bachelorproef draait rond meer informatie verzamelen omtrent het probleem van aanwezigheidsfraude. Op basis van de literatuurstudie en een ondervraging van enkele studenten en leerkrachten zal worden onderzocht wat het huidig probleem is en hoe dit zich voordoet. Naast het onderzoeken van het probleem zal er ook gekeken worden welke andere factoren invloed hebben op het onderzoek. Deze factoren zullen dienen voor een analyse van de grootste struikelblokken en risico's die kunnen optreden. Voor het uitwerken van deze analyse word een periode van twee weken gerekend. De risico-analyse als resultaat van deze stap zal worden gebruikt in de tweede stap van de methodologie om te helpen bij het onderzoeken van de nodige technologie voor de uitwerking. 
-
-\subsection{requirementsanalyse}
-In het tweede deel van het onderzoek zal over een periode van drie weken worden uitgezocht wat er nodig zal zijn van technologie en applicaties. Het uitwerken van hoe er verwacht wordt de aanwezigheidsfraude tegen te gaan moet eerst uitgewerkt worden zodat het duidelijk is wat voor software hier nodig is, welke infrastructuur dit op moet draaien en eventueel welke technische kennis er ontbreekt. Eens deze informatie is verzameld in een stappenplan van uitvoer en duid op een haalbaar onderzoek, kan dit verder verwerkt worden in de proof-of-concept.
-
-\subsection{proof-of-concept}
-Het derde deel van de bachelorproef zal het uitwerken van de proof-of-concept zijn. Hier wordt doorheen drie weken de kennis en informatie van de vorige stappen samengebracht in een geheel. Als eerste stap van deze uitvoering, zal de test omgeving worden opgesteld. Deze opstelling zal gebruikt worden om te kunnen testen dat de uitgewerkte oplossing degelijk functioneel is. Vervolgens zal op deze opstelling de nodige handelingen worden uitgevoerd om de uitgewerkte aanmeldingsmethode te kunnen testen. Deze testen zullen verschillende factoren van het onderzoek staven zoals hoe ver de gemeten afstand is vergeleken de werkelijke locatie of tot in hoever een student zijn locatie niet ophaalbaar is.
-
-\subsection{evaluatie}
-Het laatste deel van het onderzoek is het noteren en uitwerken van de behaalde resultaten. De resultaten van de proof-of-concept zullen worden genoteerd zodat achteraf kan gekeken worden hoe het onderzoek verliep. Er zal bij deze evaluatie genoteerd worden of er nog onverwachte problemen opdoken, of de nauwkeurigheid van de geofencing afweek van wat er verwacht werd en hoe het testen verliep. Het samenstellen en evalueren van deze resultaten zal ongeveer een week duren, en basis van deze resultaten kan HOGENT concluderen of de huidige toepassing van geofencing accuraat genoeg is voor de gewenste toepassing in de lessen.
+\subsection{probleemanalyse (3 weken)}
+% (NEEM GROFWEG 14 WEKEN en pas de tijden aan)
+De eerste fase van deze bachelorproef draait rond meer informatie verzamelen om het probleem te verduidelijken alsook een voorspelling op te stellen van mogelijke struikelblokken. Doormiddel van enkele studenten en leerkrachten te ondervragen wordt onderzocht of er nog methodes van fraude zijn die nog niet vermeld werden alsook suggesties van hoe dit tegen te gaan. Naast deze ondervraging wordt ook opgesteld welke andere onderdelen van het onderzoek een invloed zullen hebben op de uiteindelijke uitwerking. Het gaat hier over de technologie die ter beschikking staat, de nodige kennis voor het uitvoeren van de test en wetelijke restricties zoals privacy. Dit zou gebundeld worden tot een overzicht dat gebruikt wordt bij het verder uitwerken van de bachelorproef om te helpen problemen hierond te vermijden.
 
 
-% Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+\subsection{Oplossing ontwikkeling (4 weken)}
+In het tweede deel van het onderzoek zal uitgezocht worden wat nu exact de uitwerking wordt voor op de testopstelling. Aangezien op dit moment nog geen testopstelling vast staat kunnen de noden hier veranderen afhankelijk van wat er uitgewerkt wordt. De mogelijke uitwerking zal al eens gecontroleerd worden met het overzicht van de vorige stap om kansen op problemen te verlagen. Het resultaat van deze stap zal een concreet plan zijn van hoe de oplossing ontwikkeld moet worden en  wat deze inhoud.
 
-% Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
 
-% Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+\subsection{proof-of-concept (6 weken)}
+Het derde deel van de bachelorproef zal het uitwerken van de proof-of-concept zijn. Hier wordt de kennis en informatie van de vorige stappen gerealiseerd in een geheel. Als eerste stap van deze uitvoering, zal de test omgeving worden opgesteld. Deze opstelling zal gebruikt worden om te kunnen testen dat de uitgewerkte oplossing degelijk functioneel is. Vervolgens zal op deze opstelling de nodige handelingen worden uitgevoerd om de uitgewerkte aanmeldingsmethode te kunnen testen. Deze testen zullen verschillende delen van het onderzoek staven zoals hoe ver de gemeten afstand is vergeleken de werkelijke locatie of tot in hoever een student zijn locatie niet ophaalbaar is.
 
-% Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
 
-% Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
-
-% Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+\subsection{evaluatie (1 week)}
+Het laatste deel van het onderzoek is het noteren en uitwerken van de behaalde resultaten. De resultaten van de proof-of-concept zullen worden genoteerd zodat achteraf kan gekeken worden hoe het onderzoek verliep. Er zal bij deze evaluatie genoteerd worden of er nog onverwachte problemen opdoken, of de nauwkeurigheid van de geofencing afweek van wat er verwacht werd en hoe het testen verliep. Het samenstellen en evalueren van deze resultaten zal ongeveer een week duren, en op basis hiervan zal een conclussie opgesteld worden van het gehele onderzoek.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Het resultaat van de proof-of-concept zal behaald worden via een opstelling die de ip-adressen van de studenten ophaalt. Wanneer ze de QR-code scannen wordt gekeken of ze liggen binnen een zone rond de campus die opgesteld is doormiddel van geofencing. Indien het lukt om met deze opstelling de locatie van studenten te bepalen tijdens het scannen van de QR-code, is het eerste deel hiervan gelukt. Het verwacht resutaat is dat op basis van deze locatie er geconcludeerd kan worden of de student aanwezig was op de campus tijdens het moment dat de QR-code verscheen. Als dit resultaat is behaald zal HOGENT dit kunenn implementeren als vervanging van het huidig systeem. Indien de accuraatheid van de positie te ruim is zal dit niet betrouwbaar genoeg zijn voor aanwezigheden af te nemen en zal HOGENT dit niet implementeren. De proof-of-concept kan op verschillende tussenstappen ook vastlopen maar dit concludeerd niet meteen of het onderzoek faalt. Indien bepaalde services niet betaalbaar zijn op dit moment of kennis verijzen die niet aanwezig was tijdens dit onderzoek, dan kan het onderzoek niet verder worden uitgevoerd. In het geval dat dit zich voordoet kan de vergaarde kennis dienen als basis voor verdere uitwerking of een gelijkaardige onderzoek.
+Het verwacht resultaat van de opstelling is dat de opstelling erin zal slagen een test persoon zijn locatie te bepalen bij het scannen van een QR-code. Alhoewel de accuraatheid niet volledig gegarandeerd kan worden zal dit aantonen dat het onderzoek tot in zekere mate heeft gewerkt. Hoe accuraat dit moet zijn en of hier nog verdere uitbreidingen bij horen kan in een verder onderzoek worden uitgewerkt. Het andere mogelijke resultaat van het onderzoek is dat de uitwerking niet geslaagd is. Dit kan onder anderen gebeurt zijn omdat er een onverwacht probleem opdook tijdens de proof-of-concept of omdat de nodige technologie niet beschikbaar was door licenties of ontbrekende kennis.
