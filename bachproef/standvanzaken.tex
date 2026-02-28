@@ -7,45 +7,93 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
 
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
+Tijdens de lessen wordt een QR-code geprojecteerd vooraan op het bord, studenten krijgen vervolgens de tijd om deze code te scannen en zo worden ze aangemeld. Het huidig systeem heeft een paar problemen die het frauderen makelijk maken.  De QR-code blijft lang zichtbaar staan omdat er een 100 tal studenten deze moeten scannen. Naast een tijdelijke vertraging op Chamilo door alle studenten die zich tegelijk aanmelden, zorgt dit ook dat de code lang genoeg geprojecteerd moet blijven. In de tijd dat deze code zichtbaar staat nemen de studenten een foto om door te sturen naar hun medestudenten. Het is niet mogelijk hier te controlleren welke student dit doet en welke niet, aangezien het aantal studenten te hoog is om snel te controlleren. Eens aangemeld is het ook niet mogelijk om te weten of deze student degelijk aanwezig was op het moment van de les of niet.
 
-Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{grail.jpg}
-  \caption[Voorbeeld figuur.]{\label{fig:grail}Voorbeeld van invoegen van een figuur. Zorg altijd voor een uitgebreid bijschrift dat de figuur volledig beschrijft zonder in de tekst te moeten gaan zoeken. Vergeet ook je bronvermelding niet!}
-\end{figure}
 
-\begin{listing}
-  \begin{minted}{python}
-    import pandas as pd
-    import seaborn as sns
 
-    penguins = sns.load_dataset('penguins')
-    sns.relplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
-  \end{minted}
-  \caption[Voorbeeld codefragment]{Voorbeeld van het invoegen van een codefragment.}
-\end{listing}
+% - wat zijn factoren dat het nieuwe systeem aan moet voldoen?
+% - gdpr/privacy omtrent studenten p1
+% - wat zijn mogelijke alternatieven of uitbreidingen?
+% - hoe zou geofencing toepasbaar zijn op dit probleem?
+Geofencing is niet de enige optie om het aanwezigheidsprobleem op te lossen. Er bestaan vele methodes die mogelijkheden bieden om te helpen bij dit probleem zoals biometrische authenticatie en RFID. Beiden hebben hun voordelen wat ze een mogelijk alternatief maakt voor geofencing maar niet zonder nadelen. Een belangrijke factor om mee rekening te houden is de GDPR (General Data Protection Regulation). De GDPR-wetgeving houdt onder andere in of de privacy van studenten gerespecteerd wordt bij het verzamelen van data. De twee vermelde voorbeelden worden hieronder kort besproken om te schetsen waarom ze zouden kunnen werken in dit onderzoek alsook waarom er beslist wordt op dit moment om hier niet mee verder te werken.
 
-\lipsum[7-20]
+\subsection{Biometrische data}
+Biometrische data wordt beschreven door \textcite{Jeunen2025} als een unieke set aan informatie die vergaard wordt via technische proccessen gelinkt aan een persoon zijn fysieke, mentale of 
+gedrags-attributen. Dit kan onder andere gebeuren via gezichtsherkenning of vingerafrukken. Een voorbeeld van hoe dit kan worden toegepast is dat er gebruikt zou gemaakt worden van gezichtsherkenning door camera's in de lokalen. Alhoewel een camera op zichzelf is toegestaan, komt de GDPR pas ten sprake eens je deze recordings zou combineren met gezichtsherkennende software. Volgens \textcite{Persoonsgegevens2025} valt software gebruiken om gezichten te kunnen onderschijden van elkaar met als doel iemand te identificeren onder de criteria van biometrische data. Alle data die voldoet aan deze lijst moet dus ook voldoen aan GDPR-wetgevingen, anders is dit een misbruik van informatie. In 2019 had een Zweedse school geprobeerd te werken met aanwezigheden afnemen via gezichtsherkenning, maar er werd tijdens de proef periode vastgesteld door de Zweedse Data Protection Agreement (DPA) dat deze test moest stopgezet worden. De privacy van studenten werd niet gerespecteerd door deze constante monitoring en schende daarbij enkele regels van de GDPR. De verantwoordelijke school moest hiervoor 200.000 SEK betalen in schadevergoeding wat overeenkomt met 20.000 euro \autocite{Board2025}.
 
-\begin{table}
-  \centering
-  \begin{tabular}{lcr}
-    \toprule
-    \textbf{Kolom 1} & \textbf{Kolom 2} & \textbf{Kolom 3} \\
-    $\alpha$         & $\beta$          & $\gamma$         \\
-    \midrule
-    A                & 10.230           & a                \\
-    B                & 45.678           & b                \\
-    C                & 99.987           & c                \\
-    \bottomrule
-  \end{tabular}
-  \caption[Voorbeeld tabel]{\label{tab:example}Voorbeeld van een tabel.}
-\end{table}
+\subsection{Radio-Frequency IDentification (RFID)}
+RFID is een technologie waarbij er via radio signalen kan data overgeplaatst worden zonder direct contact \autocite{Andrew}. Deze technologie wordt onder andere toegepast bij de studentenkaarten van HOGENT. Elke student bezit een kaart met zijn studenten foto, een barcode als identificatie voor de kaart maar ook een inwendige chip. Deze chip toont aan dat dit een geldige studentenkaart is want hij kan onder andere gebruikt worden om mee te betalen op campus. Deze technologie is heel flexibel en kan dus ook toegepast worden om aanwezigheden af te nemen. Bedrijven zoals Cykeo en Viaonda hebben zich gericht naar het ontwikkelen van een systeem dat toelaat aanwezigheden af te nemen via verschillende RFID-scanners buiten lokalen, aan de school ingang of in de hallen \autocites{ViaOnda2025}{Cykeo2025}. Deze methode van aanmelden is efficïent en al deels geïmplementeerd dankzij de studentenkaarten, maar om het volledig te kunnen benutten zou nog de installatie nodig zijn van de scanners doorheen de campus. Een van de voornaamste nadelen wel van deze methode voor aanwezigheden af te nemen is dat een student meerdere kaarten kan meenemen en scannen wat zorgt dat fraude mogelijk blijft.
+% - wat is geofencing en zijn er variaties van?
+\subsection{Geofencing}
+Geofencing is een locatie-gebasseerde technologie die virtuele grenzen trekt rond een omgeving \autocite{Hoffman2022}. Deze toepassing kan op verschillende manieren gebruikt worden, gaande van gewoon informatie verzamelen hoe vaak mensen een plek passeren tot actief iemand zijn toegang tot applicaties of andere software beperken bij het verlaten van deze grens. Binnen deze methode kan een onderschijd gemaakt woden tussen twee types van geofencing, actieve en passieve:
+
+\subsubsection{Actieve}
+Actieve geofencing gebeurt doormiddel van de gebruiker zijn GPS-signaal om zo nauwkeurig de locatie te kunnen volgen en data op te halen. Deze methode is intensiever voor batterijgebruik door de constante data die doorgegeven wordt en de applicatie die blijft draaien. Een voordeel van deze methode is onder anderen dat er een melding of andere reactie kan geactiveerd worden indien de gebruiker een virtuele grens oversteekt of zich op een bepaalde locatie bevindt. Een voorbeeld hiervan is het spel `pokemon-go' waar de speler zijn locatie in het spel meebeweegd met zijn locatie in het echt \autocite{Hoffman2022}.
+
+\subsubsection{Passieve}
+Passieve geofencing is in tegenstelling tot actieve geofencing niet intensief op de baterij, noch heeft het GPS verbinding nodig. Deze variant werkt doormiddel van wifi, zendmasten of gelijkaardige methodes. Indien een gsm verbindt met een van deze opties, kan zijn positie grofweg worden vastgesteld omdat de gebruiker zich in de buurt van het signaal moet bevinden. Op basis hiervan kunnen bedrijven signalen geven naar consumenten zoals reclame of korting \autocite{Hoffman2022}. Een voorbeeld van deze methode is Proximus of Telenet die een bericht sturen als je naar het buitenland gaat omdat je verbindt met een zendmast voorbij de grens.
+
+% - gdpr/privacy omtrent studenten p2
+Voor de uitwerking van deze bachelorproef zal er eerder gekozen worden voor passieve geofencing. Deze methode vereist minder input van de studenten zoals hun locatie zichtbaar zetten en is minder intensief voor hun gsm-batterij. Bij het uitwerken van hoe deze passieve geofencing kan geïmplementeerd worden, zal moeten opgepast worden dat hier geen schending gebeurt van de GDPR-wetgeving aangezien dit, zoals eerder vermeld kan leiden tot sancties gaande van het stopzetten van het project tot financiële vergoedingen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
+
+% Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
+
+% \textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
+
+% Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
+
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{grail.jpg}
+%   \caption[Voorbeeld figuur.]{\label{fig:grail}Voorbeeld van invoegen van een figuur. Zorg altijd voor een uitgebreid bijschrift dat de figuur volledig beschrijft zonder in de tekst te moeten gaan zoeken. Vergeet ook je bronvermelding niet!}
+% \end{figure}
+
+% \begin{listing}
+%   \begin{minted}{python}
+%     import pandas as pd
+%     import seaborn as sns
+
+%     penguins = sns.load_dataset('penguins')
+%     sns.relplot(data=penguins, x="flipper_length_mm", y="bill_length_mm", hue="species")
+%   \end{minted}
+%   \caption[Voorbeeld codefragment]{Voorbeeld van het invoegen van een codefragment.}
+% \end{listing}
+
+% \lipsum[7-20]
+
+% \begin{table}
+%   \centering
+%   \begin{tabular}{lcr}
+%     \toprule
+%     \textbf{Kolom 1} & \textbf{Kolom 2} & \textbf{Kolom 3} \\
+%     $\alpha$         & $\beta$          & $\gamma$         \\
+%     \midrule
+%     A                & 10.230           & a                \\
+%     B                & 45.678           & b                \\
+%     C                & 99.987           & c                \\
+%     \bottomrule
+%   \end{tabular}
+%   \caption[Voorbeeld tabel]{\label{tab:example}Voorbeeld van een tabel.}
+% \end{table}
 

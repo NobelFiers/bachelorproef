@@ -1,0 +1,24 @@
+import { GeoToolKit } from 'geo-toolkits';
+
+const kit = new GeoToolKit();
+
+// Load spatial data
+await kit.loadFromFile('./geofile.geojson');
+
+// Check if a point is inside any polygon
+const result = kit.contains(51.032587, 3.703167); // HOGENT coordinaten
+
+if (result.isInside) {
+  console.log(`Point is inside feature: ${result.featureIndex}. Welkom op HOGENT`);
+}
+else {console.log(`Jij bent niet aanwezig`)}
+
+// Calculate total area
+// const totalArea = kit.getArea(); // in square meters
+
+// const areaInKm2 = kit.getAreaInUnit('square_kilometers');
+// Get bounding box
+
+// const bbox = kit.getBoundingBox();
+
+// console.log(`Area spans: ${bbox.maxLat - bbox.minLat} degrees latitude`);
