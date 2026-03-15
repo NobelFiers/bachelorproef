@@ -17,18 +17,15 @@
 
 
 
-Binnen de HOGENT vinden zich elke dag verschillende lessen plaats. Sommige van deze lessen zijn interesanter dan anderen, maar toch zijn de meeste van deze lessen vrijblijvend. Voor de weinige keren dat een les dus verplichte aanwezigheid veresit wil HOGENT kunnen garanderen dat studenten degelijk aanwezig zullen zijn. Hoe ze dit huidig doen is doormiddel van een QR-code die geprojecteerd wordt. De student scant deze code wat leidt naar het schoolplatform (Chamilo) en bevestigt zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Deze methode laat HOGENT toe om grote hoeveelheden studenten tegelijk te verifiëren. 
+Binnen de HOGENT vinden zich elke dag verschillende lessen plaats. Alhoewel de meeste lessen vrijblijvend zijn, is er wel af en toe een les waarbij HOGENT verwacht dat elke student zal komen. Voor de weinige keren dat een les dus verplichte aanwezigheid veresit wil HOGENT kunnen garanderen dat studenten degelijk aanwezig zullen zijn. Hoe ze dit huidig doen is doormiddel van een QR-code die geprojecteerd wordt. De student scant deze code wat leidt naar het schoolplatform (Chamilo) en bevestigt zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Deze methode laat HOGENT toe om grote hoeveelheden studenten tegelijk te verifiëren. 
 
 Op papier zou dit werken om aanwezigheden te garanderen maar studenten hebben een omweg gevonden. Tijdens het projecteren van de QR-code worden er foto's genomen in plaats van ze te scannen. Deze foto's worden doorgestuurd naar studenten die niet aanwezig zijn op de campus. Ook al wordt dit gescant van een totaal andere locatie, zal dit nog steeds gerekend worden als een geldige aanwezigheid.
 
-Het doel van deze bachelorproef is een antwoord vinden op de vraag: `Hoe kan geofencing worden toegepast om te helpen de aanwezigheidsfraude tegen te gaan binnen de verplichte lessen van HOGENT?'. Om te helpen dit te onderzoeken is de bachelorproef opgesplitst in verschillende delen. Het begint bij het opstellen van een literatuurstudie. Deze studie zal dienen om meer het probleem te schetsen en informatie te geven rond mogelijke alternatieven alsook een onderzoek naar de implementatie van de gekozen "oplossing". 
+Het doel van deze bachelorproef is een antwoord vinden op de vraag: `Hoe kan geofencing worden toegepast om te helpen de aanwezigheidsfraude tegen te gaan binnen de verplichte lessen van HOGENT?'. Om te helpen dit te onderzoeken is de bachelorproef opgesplitst in verschillende delen. 
+
+In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie. Deze studie zal dienen om meer het probleem te schetsen en informatie te geven rond mogelijke alternatieven alsook een onderzoek naar de implementatie van de gekozen "oplossing". 
 % deelvragen nog hierin toevoegen mischien?
-Vervolgens zal de methodologie worden beschreven, een verdeling van de tijd doorheen de bachelorproef. Dit geeft een idee van hoe het onderzoek werd opgedeeld over een tijdsperiode. Nadien is het tijd voor de Proof-of-concept,%check spelling poc
- de fysieke uitwerking van de oplossing die opgebouwd werd door het voorafgaande onderzoek. Het doel is hier testen of het uitwerken van een gekozen methode haalbaar was. Eens deze uitwerking behaald is begint het degelijk testen of het voldoet aan de eisen van het onderzoek. Het kan evengoed dat de uitwerking haalbaar is maar door testen wordt geobserveerd dat het niet de moeite waard is ten opzichte van de originele methode. Tot slot is er de conclussie, hierin wordt besproken hoe goed het resultaat van de Proof-Of-Concept%check spelling poc
-  presteerde en wat er geleerd is uit dit onderzoek. Was het een success? Is het resultaat zoals gehoopt? Indien het mislukte, is er iets interessant uit gekomen dat mischien andere studies kan helpen?
-
-
-
+Vervolgens zal in hoofdstuk~\ref{ch:methodologie} de methodologie worden beschreven, een verdeling van de tijd doorheen de bachelorproef. Dit geeft een idee van hoe het onderzoek werd opgedeeld over een tijdsperiode. Nadien is het tijd voor het hoofdstuk~\ref{ch:Proof-of-Concept}, de fysieke uitwerking van de oplossing die opgebouwd werd door het voorafgaande onderzoek. Het doel is hier testen of het uitwerken van een gekozen methode haalbaar was. Eens deze uitwerking behaald is begint het degelijk testen of het voldoet aan de eisen van het onderzoek. Het kan evengoed dat de uitwerking haalbaar is maar door testen wordt geobserveerd dat het niet de moeite waard is ten opzichte van de originele methode. Tot slot is er de ~\ref{ch:conclusie}, hierin wordt besproken hoe goed het resultaat van de Proof-of-Concept presteerde en wat er geleerd is uit dit onderzoek. Was het een success? Is het resultaat zoals gehoopt? Indien het mislukte, is er iets interessant uit gekomen dat mischien andere studies kan helpen?
 
 
 
@@ -36,52 +33,52 @@ Vervolgens zal de methodologie worden beschreven, een verdeling van de tijd door
 % TEMPLATE STAAT HIERONDER, HUIDIGE TEKST NOG AANPASSEN OM AAN DEZE TEMPLATE TE VOLDOEN.
 
 
+ 
 
 
 
 
 
+% De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
 
-De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
+% \begin{itemize}
+%   \item context, achtergrond
+%   \item afbakenen van het onderwerp
+%   \item verantwoording van het onderwerp, methodologie
+%   \item probleemstelling
+%   \item onderzoeksdoelstelling
+%   \item onderzoeksvraag
+%   \item \ldots
+% \end{itemize}
 
-\begin{itemize}
-  \item context, achtergrond
-  \item afbakenen van het onderwerp
-  \item verantwoording van het onderwerp, methodologie
-  \item probleemstelling
-  \item onderzoeksdoelstelling
-  \item onderzoeksvraag
-  \item \ldots
-\end{itemize}
+% \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
+% \label{sec:probleemstelling}
 
-\section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
-\label{sec:probleemstelling}
+% Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's'', systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
 
-Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's'', systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+% \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
+% \label{sec:onderzoeksvraag}
 
-\section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
-\label{sec:onderzoeksvraag}
+% Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
 
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+% \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
+% \label{sec:onderzoeksdoelstelling}
 
-\section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
-\label{sec:onderzoeksdoelstelling}
+% Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk. Gaat het bv.\ om een proof-of-concept, een prototype, een verslag met aanbevelingen, een vergelijkende studie, enz.
 
-Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk. Gaat het bv.\ om een proof-of-concept, een prototype, een verslag met aanbevelingen, een vergelijkende studie, enz.
+% \section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}%
+% \label{sec:opzet-bachelorproef}
 
-\section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}%
-\label{sec:opzet-bachelorproef}
+% % Het is gebruikelijk aan het einde van de inleiding een overzicht te
+% % geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
+% % die je kan aanvullen/aanpassen in functie van je eigen tekst.
 
-% Het is gebruikelijk aan het einde van de inleiding een overzicht te
-% geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
-% die je kan aanvullen/aanpassen in functie van je eigen tekst.
+% De rest van deze bachelorproef is als volgt opgebouwd:
 
-De rest van deze bachelorproef is als volgt opgebouwd:
+% In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
 
-In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+% In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
 
-In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+% % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
 
-% TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
-
-In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
+% In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
