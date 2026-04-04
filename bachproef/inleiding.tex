@@ -5,6 +5,7 @@
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}%
 \label{ch:inleiding}
 
+% OUDE VERSIE VAN DE INLEIDING 01 (bevat de deelvragen ook)
 % Binnen de HOGENT wordt er voor lessen met verplichte aanwezigheid gecontroleerd of studenten wel degelijk zijn komen opdagen. De manier waarop deze aanwezigheid word bijgehouden is door middel van een QR-code die geprojecteerd wordt. De student scant deze code wat leidt naar het schoolplatform (Chamilo) en bevestigt zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Het probleem bij deze methode van aanwezigheden afnemen is dat studenten de QR-code kunnen fotograferen en doorsturen naar hun medestudenten die al dan niet thuis zijn of ergens volledig anders. 
 
 % Het doel van deze bachelorproef is een antwoord vinden op de vraag: `Hoe kan geofencing worden toegepast om te helpen de aanwezigheidsfraude tegen te gaan binnen de verplichte lessen van HOGENT?' Door middel van een onderzoek naar de toepassingen van geofencing alsook de noden van een nieuw systeem zal dit worden uitgewerkt. Het uitwerken van dit onderzoek zal worden ondersteund door enkele deelvragen:
@@ -16,21 +17,111 @@
 % \end{itemize}
 
 
+% OUDE VERSIE VAN DE INLEIDING 02
+% Binnen de HOGENT vinden zich elke dag verschillende lessen plaats. Alhoewel de meeste lessen vrijblijvend zijn, is er wel af en toe een les waarbij HOGENT verwacht dat elke student zal komen. Voor de weinige keren dat een les dus verplichte aanwezigheid veresit wil HOGENT kunnen garanderen dat studenten degelijk aanwezig zullen zijn. Hoe ze dit huidig doen is doormiddel van een QR-code die geprojecteerd wordt. De student scant deze code wat leidt naar het schoolplatform (Chamilo) en bevestigt zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Deze methode laat HOGENT toe om grote hoeveelheden studenten tegelijk te verifiëren. 
+
+% Op papier zou dit werken om aanwezigheden te garanderen maar studenten hebben een omweg gevonden. Tijdens het projecteren van de QR-code worden er foto's genomen in plaats van ze te scannen. Deze foto's worden doorgestuurd naar studenten die niet aanwezig zijn op de campus. Ook al wordt dit gescant van een totaal andere locatie, zal dit nog steeds gerekend worden als een geldige aanwezigheid.
+
+% Het doel van deze bachelorproef is een antwoord vinden op de vraag: `Hoe kan geofencing worden toegepast om te helpen de aanwezigheidsfraude tegen te gaan binnen de verplichte lessen van HOGENT?'. Om te helpen dit te onderzoeken is de bachelorproef opgesplitst in verschillende delen. %hier deelvragen.
+
+% In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie. Deze studie zal dienen om meer het probleem te schetsen en informatie te geven rond mogelijke alternatieven alsook een onderzoek naar de implementatie van de gekozen "oplossing". 
+% % deelvragen nog hierin toevoegen mischien?
+% Vervolgens zal in hoofdstuk~\ref{ch:methodologie} de methodologie worden beschreven, een verdeling van de tijd doorheen de bachelorproef. Dit geeft een idee van hoe het onderzoek werd opgedeeld over een tijdsperiode. Nadien is het tijd voor het hoofdstuk~\ref{ch:Proof-of-Concept} % werkt niet als verwijzing en "is het tijd voor" is spreektaal
+% , de fysieke uitwerking van de oplossing die opgebouwd werd door het voorafgaande onderzoek. Het doel is hier testen of het uitwerken van een gekozen methode haalbaar was. Eens deze uitwerking behaald is begint het degelijk testen of het voldoet aan de eisen van het onderzoek. Het kan evengoed dat de uitwerking haalbaar is maar door testen wordt geobserveerd dat het niet de moeite waard is ten opzichte van de originele methode. Tot slot is er de ~\ref{ch:conclusie}, hierin wordt besproken hoe goed het resultaat van de Proof-of-Concept presteerde en wat er geleerd is uit dit onderzoek. Was het een success? Is het resultaat zoals gehoopt? Indien het mislukte, is er iets interessant uit gekomen dat mischien andere studies kan helpen?
+
+
+
+
+
+
+
+
+
+
+% HUIDIGE VERSIE VAN DE INLEIDING
+\begin{itemize}
+  \item context, achtergrond
+  \item afbakenen van het onderwerp
+  \item verantwoording van het onderwerp, methodologie
+  \item probleemstelling
+  \item onderzoeksdoelstelling
+  \item onderzoeksvraag
+  \item \ldots
+\end{itemize} 
+
+\section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
+\label{sec:probleemstelling}
 
 Binnen de HOGENT vinden zich elke dag verschillende lessen plaats. Alhoewel de meeste lessen vrijblijvend zijn, is er wel af en toe een les waarbij HOGENT verwacht dat elke student zal komen. Voor de weinige keren dat een les dus verplichte aanwezigheid veresit wil HOGENT kunnen garanderen dat studenten degelijk aanwezig zullen zijn. Hoe ze dit huidig doen is doormiddel van een QR-code die geprojecteerd wordt. De student scant deze code wat leidt naar het schoolplatform (Chamilo) en bevestigt zo via zijn account dat hij fysiek aanwezig was in deze les. Deze methode geeft een duidelijk overzicht van de aanwezige studenten en daarmee ook wie er niet verschenen is. Deze methode laat HOGENT toe om grote hoeveelheden studenten tegelijk te verifiëren. 
 
-Op papier zou dit werken om aanwezigheden te garanderen maar studenten hebben een omweg gevonden. Tijdens het projecteren van de QR-code worden er foto's genomen in plaats van ze te scannen. Deze foto's worden doorgestuurd naar studenten die niet aanwezig zijn op de campus. Ook al wordt dit gescant van een totaal andere locatie, zal dit nog steeds gerekend worden als een geldige aanwezigheid.
+\section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
+\label{sec:onderzoeksvraag}
 
-Het doel van deze bachelorproef is een antwoord vinden op de vraag: `Hoe kan geofencing worden toegepast om te helpen de aanwezigheidsfraude tegen te gaan binnen de verplichte lessen van HOGENT?'. Om te helpen dit te onderzoeken is de bachelorproef opgesplitst in verschillende delen. 
+Het doel van deze bachelorproef is een antwoord vinden op de vraag: `Hoe kan geofencing worden toegepast om te helpen de aanwezigheidsfraude tegen te gaan binnen de verplichte lessen van HOGENT?'. Om te helpen dit te onderzoeken is de bachelorproef opgesplitst in verschillende deelvragen.  
+\begin{itemize} % deze deelvragen zullen mogelijks nog wijzigen.
+  \item Wat moet deze uitbreiding op het huidig systeem bereiken?
+  \item Hoe nauwkeurig zou het systeem moeten zijn en tot in welke mate beïnvloedt dit de nuttigheid?
+  \item Welke alternatieven op geofencing zijn er?
+  \item In welke mate zal er iets veranderen langs de student hun kant en kan dit beperkt worden?
+\end{itemize} 
+
+\section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
+\label{sec:onderzoeksdoelstelling}
+
+Het doel van deze bachelorproef is via een proof-of-concept aantonen dat er via geofencing efficïent kan bepaald worden of een student zich bevindt op de campus van Hogeschool Gent of niet. Het bepalen van dit success zal afhangen van x factoren, namelijk:
+- De nauwkeurigheid van de detectie. Indien het marge op de student hun locatie niet ruim genoeg is, kan het zijn dat hij/zij als afwezig wordt gerekend ondanks dat ze wel aanwezig waren op de campus.
+- De simpelheid van het uitvoeren. De gekozen oplossing mag niet vereisen dat de student een heel stappenplan moet volgen om hun aanwezigheid te bevestigen. 
+- Hoe invasief de methode is op de studenten. Het doel is zo min mogelijk de student hun privacy beïnvloeden zoals via locatie gegevens. % OPRECHT NOG EENS UITZOEKEN WANT EEN LOCATIE  WETEN ZONDER INBREUK OP PRIVACY IS KINDA MOEILIJK.
+
+\section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}%
+\label{sec:opzet-bachelorproef}
+
+% Het is gebruikelijk aan het einde van de inleiding een overzicht te
+% geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
+% die je kan aanvullen/aanpassen in functie van je eigen tekst.
+
+De rest van deze bachelorproef is als volgt opgebouwd:
 
 In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie. Deze studie zal dienen om meer het probleem te schetsen en informatie te geven rond mogelijke alternatieven alsook een onderzoek naar de implementatie van de gekozen "oplossing". 
-% deelvragen nog hierin toevoegen mischien?
-Vervolgens zal in hoofdstuk~\ref{ch:methodologie} de methodologie worden beschreven, een verdeling van de tijd doorheen de bachelorproef. Dit geeft een idee van hoe het onderzoek werd opgedeeld over een tijdsperiode. Nadien is het tijd voor het hoofdstuk~\ref{ch:Proof-of-Concept}, de fysieke uitwerking van de oplossing die opgebouwd werd door het voorafgaande onderzoek. Het doel is hier testen of het uitwerken van een gekozen methode haalbaar was. Eens deze uitwerking behaald is begint het degelijk testen of het voldoet aan de eisen van het onderzoek. Het kan evengoed dat de uitwerking haalbaar is maar door testen wordt geobserveerd dat het niet de moeite waard is ten opzichte van de originele methode. Tot slot is er de ~\ref{ch:conclusie}, hierin wordt besproken hoe goed het resultaat van de Proof-of-Concept presteerde en wat er geleerd is uit dit onderzoek. Was het een success? Is het resultaat zoals gehoopt? Indien het mislukte, is er iets interessant uit gekomen dat mischien andere studies kan helpen?
+
+In Hoofdstuk~\ref{ch:methodologie} zal de methodologie worden beschreven, een verdeling van de tijd doorheen de bachelorproef. Dit geeft een idee van hoe het onderzoek werd opgedeeld over een tijdsperiode en wat er moest behaald worden.
+
+In Hoofdstuk~\ref{ch:verwerking} wordt een keuze gemaakt van welke methode er zal gekozen worden om te verwerken tot de proof-of-concept. Deze keuze zal gemaakt worden op basis van de voorgaande literatuurstudie alsook doormiddel van de beantwoorde deelvragen.
+%soort van tussenstuk waar je besluit "op basis van de literatuurstudie kiezen we voor methode x en welke deelvragen beantwoord zijn.
+
+In Hoofdstuk~\ref{ch:proof-of-concept} vindt de fysieke uitwerking van de gekozen oplossing plaats. Het doel is hier testen of het uitwerken van een gekozen methode haalbaar was. Eens deze uitwerking behaald is begint het degelijk testen of het voldoet aan de eisen van het onderzoek. Het kan evengoed dat de uitwerking haalbaar is maar door testen wordt geobserveerd dat het niet de moeite waard is ten opzichte van de originele methode.
+
+% TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
+
+In Hoofdstuk~\ref{ch:conclusie}, tenslotte, hierin wordt besproken hoe goed het resultaat van de proof-of-concept presteerde en wat er geleerd is uit dit onderzoek. Was het een success? Is het resultaat zoals gehoopt? Indien het mislukte, is er iets interessant uit gekomen dat mischien andere studies kan helpen?
 
 
 
 
-% TEMPLATE STAAT HIERONDER, HUIDIGE TEKST NOG AANPASSEN OM AAN DEZE TEMPLATE TE VOLDOEN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% TEMPLATE STAAT HIERONDER, HUIDIGE TEKST NOG AANPASSEN OM AAN DEZE TEMPLATE TE VOLDOEN. -> SPECIFIEK DIE HOOFDINGEN BEST TERUG TOEVOEGEN en deelvragen ook er in zetten (mag als oplijsting.)
 
 
  
@@ -78,6 +169,10 @@ Vervolgens zal in hoofdstuk~\ref{ch:methodologie} de methodologie worden beschre
 % In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
 
 % In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+
+% soort van tussenstuk waar je besluit "op basis van de literatuurstudie kiezen we voor methode x en welke deelvragen beantwoord zijn.
+
+% proof-of-concept
 
 % % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
 
