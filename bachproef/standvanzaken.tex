@@ -46,7 +46,13 @@ gedrags-attributen. Dit kan onder andere gebeuren via gezichtsherkenning of ving
 RFID is een technologie waarbij er via radio signalen kan data overgeplaatst worden zonder direct contact \autocite{Andrew}. Deze technologie wordt onder andere toegepast bij de studentenkaarten van HOGENT. Elke student bezit een kaart met zijn studenten foto, een barcode als identificatie voor de kaart maar ook een inwendige chip. Deze chip toont aan dat dit een geldige studentenkaart is want hij kan onder andere gebruikt worden om mee te betalen op campus. Deze technologie is heel flexibel en kan dus ook toegepast worden om aanwezigheden af te nemen. Bedrijven zoals Cykeo en Viaonda hebben zich gericht naar het ontwikkelen van een systeem dat toelaat aanwezigheden af te nemen via verschillende RFID-scanners buiten lokalen, aan de school ingang of in de hallen \autocites{ViaOnda2025}{Cykeo2025}. Deze methode van aanmelden is efficïent en al deels geïmplementeerd dankzij de studentenkaarten, maar om het volledig te kunnen benutten zou nog de installatie nodig zijn van de scanners doorheen de campus. Een van de voornaamste nadelen wel van deze methode voor aanwezigheden af te nemen is dat een student meerdere kaarten kan meenemen en scannen wat zorgt dat fraude mogelijk blijft.
 % - wat is geofencing en zijn er variaties van?
 \section{Geofencing}  % dit moet MEER ZIJN
-Geofencing is een locatie-gebasseerde technologie die virtuele grenzen trekt rond een omgeving \autocite{Hoffman2022}. Deze toepassing kan op verschillende manieren gebruikt worden, gaande van gewoon informatie verzamelen hoe vaak mensen een plek passeren tot actief iemand zijn toegang tot applicaties of andere software beperken bij het verlaten van deze grens. Binnen deze methode kan een onderscheidt gemaakt woden tussen twee types van geofencing, actieve en passieve:
+Geofencing is een locatie-gebasseerde technologie die virtuele grenzen trekt rond een omgeving \autocite{Hoffman2022}. Doormiddel
+
+
+
+% dit stuk ver volledig herschrijven om meer uit te leggen wat geofencing degelijk is en mogelijks hierin beschrijven wat de accuraatheid ook is/zou moeten zijn.
+% eens een boek als bron vinden liefst, zoniet, 3 boeken zoeken om bij de voorgaande stukken te plakken als "compensatie". ook een paper mischien?
+Deze toepassing kan op verschillende manieren gebruikt worden, gaande van gewoon informatie verzamelen hoe vaak mensen een plek passeren tot actief iemand zijn toegang tot applicaties of andere software beperken bij het verlaten van deze grens. Binnen deze methode kan een onderscheidt gemaakt woden tussen twee types van geofencing, actieve en passieve:
 
 \subsection{Actieve}
 Actieve geofencing gebeurt doormiddel van de gebruiker zijn GPS-signaal om zo nauwkeurig de locatie te kunnen volgen en data op te halen. Deze methode is intensiever voor batterijgebruik door de constante data die doorgegeven wordt en de applicatie die blijft draaien. Een voordeel van deze methode is onder anderen dat er een melding of andere reactie kan geactiveerd worden indien de gebruiker een virtuele grens oversteekt of zich op een bepaalde locatie bevindt. Een voorbeeld hiervan is het spel `pokemon-go' waar de speler zijn locatie in het spel meebeweegd met zijn locatie in het echt \autocite{Hoffman2022}.
@@ -54,23 +60,19 @@ Actieve geofencing gebeurt doormiddel van de gebruiker zijn GPS-signaal om zo na
 \subsection{Passieve}
 Passieve geofencing is in tegenstelling tot actieve geofencing niet intensief op de baterij, noch heeft het GPS verbinding nodig. Deze variant werkt doormiddel van wifi, zendmasten of gelijkaardige methodes. Indien een gsm verbindt met een van deze opties, kan zijn positie grofweg worden vastgesteld omdat de gebruiker zich in de buurt van het signaal moet bevinden. Op basis hiervan kunnen bedrijven signalen geven naar consumenten zoals reclame of korting \autocite{Hoffman2022}. Een voorbeeld van deze methode is Proximus of Telenet die een bericht sturen als je naar het buitenland gaat omdat je verbindt met een zendmast voorbij de grens.
 
-% - gdpr/privacy omtrent studenten p2 
-% NOG AANPASSEN, DE POC OP DIT MOMENT IS DENK IK ACTIEVE GEOFENCING, NIET PASSIEF
-Voor de uitwerking van deze bachelorproef zal er eerder gekozen worden voor passieve geofencing. Deze methode vereist minder input van de studenten zoals hun locatie zichtbaar zetten en is minder intensief voor hun gsm-batterij. Bij het uitwerken van hoe deze passieve geofencing kan geïmplementeerd worden, zal moeten opgepast worden dat hier geen schending gebeurt van de GDPR-wetgeving aangezien dit, zoals eerder vermeld kan leiden tot sancties gaande van het stopzetten van het project tot financiële vergoedingen.
 
 
-
-% WIP (nog eens zien hoe ik dit zou toevoegen)
+% WIP (nog eens zien hoe ik dit zou toevoegen)  NIET HIER TOEVOEGEN, DIT VALT ONDER POC
 % Het berekenen van de positie van studenten kan verdeeld worden in twee onderdelen. Het eerste deel is het afbakenen van de locatie/het opstellen van de geofence. Bij het kiezen van deze methoden moet gekeken worden naar hoe dit kan worden vastgesteld/wat er nodig is.
 
 % twee deel is hoe de locatie van de student ophalen? afhankelijk van methode 1 dit anders verwoorden? in huidig geval heb ik coordianten nodig, dus iets van onderzoek naar het oophalen van coordinaten nodig!
 
-Het bepalen van de locatie van studenten hun aanwezigheid kan opgedeeld worden in twee onderdelen. Het eerste onderdeel is het ophalen van de locatie van de student. % verschillende methodes maar wat willen we gebruiken/wat lijkt er de beste? bronnen zoeken hiervoor ook
-% het doel dat ik liefst zou hebben is coordinaten bemachtigen, deze kan ik dan invoeren in de .net geofence setup die ik had getest.
-Het tweede deel is het opstellen van de geofence waarmee de locatie zal vergeleken worden. %/autocit(%de .net applicatie of het forum dat ik had gevonden waarin ze dit voorstelde) 
-"in dit onderzoek werd er gekozen voor de methode xxx. Deze methode is volgens BRON een simpele maar efficiente methode voor het vaststellen van geofences door xxx" %nog aanpassen 
-Bij deze methode zal er gebruik worden gemaakt van een xxx applicatie. Doormiddel van verschillende punten te declareren als nodes, en vervolgens hiertussen lijnen te spannen kan er een denkbeeldig oppervlak worden geschetst op een wereld kaart of in dit geval, op een kaart van regio Gent. Doormiddel van een berekening %meer uitleg geven dan gewoon dat
-zal berekend worden wat de oppervlakte is van deze zone en hierdoor kan dus ook een wilkeurige coordinaat getest worden. 
+% Het bepalen van de locatie van studenten hun aanwezigheid kan opgedeeld worden in twee onderdelen. Het eerste onderdeel is het ophalen van de locatie van de student. % verschillende methodes maar wat willen we gebruiken/wat lijkt er de beste? bronnen zoeken hiervoor ook
+% % het doel dat ik liefst zou hebben is coordinaten bemachtigen, deze kan ik dan invoeren in de .net geofence setup die ik had getest.
+% Het tweede deel is het opstellen van de geofence waarmee de locatie zal vergeleken worden. %/autocit(%de .net applicatie of het forum dat ik had gevonden waarin ze dit voorstelde) 
+% "in dit onderzoek werd er gekozen voor de methode xxx. Deze methode is volgens BRON een simpele maar efficiente methode voor het vaststellen van geofences door xxx" %nog aanpassen 
+% Bij deze methode zal er gebruik worden gemaakt van een xxx applicatie. Doormiddel van verschillende punten te declareren als nodes, en vervolgens hiertussen lijnen te spannen kan er een denkbeeldig oppervlak worden geschetst op een wereld kaart of in dit geval, op een kaart van regio Gent. Doormiddel van een berekening %meer uitleg geven dan gewoon dat
+% zal berekend worden wat de oppervlakte is van deze zone en hierdoor kan dus ook een wilkeurige coordinaat getest worden. 
 
 
 
